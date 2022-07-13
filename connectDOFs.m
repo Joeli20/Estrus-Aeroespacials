@@ -1,9 +1,6 @@
 function Td = connectDOFs(n_el,n_nod,n_i,Tn)
 %--------------------------------------------------------------------------
 % The function takes as inputs:
-
-%prova
-
 %   - Dimensions:  n_el     Total number of elements
 %                  n_nod    Number of nodes per element
 %                  n_i      Number of DOFs per node
