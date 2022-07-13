@@ -1,6 +1,9 @@
 function [vL,vR,uR] = applyCond(n_i,n_dof,fixNod)
 %--------------------------------------------------------------------------
 % The function takes as inputs:
+
+%Això és una prova
+
 %   - Dimensions:  n_i      Number of DOFs per node
 %                  n_dof    Total number of DOFs
 %   - fixNod  Prescribed displacements data [Npresc x 3]

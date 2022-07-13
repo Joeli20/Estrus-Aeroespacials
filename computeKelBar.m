@@ -1,6 +1,9 @@
 function Kel = computeKelBar(n_d,n_nod,n_i,n_el,x,Tn,mat,Tmat)
 %--------------------------------------------------------------------------
 % The function takes as inputs:
+
+%Això és una prova
+
 %   - Dimensions:  n_d        Problem's dimensions
 %                  n_el       Total number of elements
 %   - x     Nodal coordinates matrix [n x n_d]
