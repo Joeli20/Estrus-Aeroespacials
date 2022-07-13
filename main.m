@@ -2,7 +2,6 @@
 % ASSIGNMENT 01 - Part B1 + B2
 %-------------------------------------------------------------------------%
 
-%prova
 % Date:21/02/2022
 % Author/s: Gerard Toset Alonso
 %           Joel Campo Moyà
