@@ -1,10 +1,8 @@
 function Kel = computeKelBar(n_d,n_nod,n_i,n_el,x,Tn,mat,Tmat)
 %--------------------------------------------------------------------------
 
-
-
-
 %proves main
+% prova branches i tal
 
 
 % The function takes as inputs:
