@@ -25,8 +25,32 @@ FextR = Fext(vR,1);
 F0L = F0(vL,1);
 F0R = F0(vR,1);
 
+LHS = KLL;
+RHS = FextL-KLR*uR+F0L;
 
-uL = inv(KLL)*(FextL-KLR*uR+F0L);
+st.LHS = LHS;
+st.RHS = RHS;
+
+disp 'Enter 1 for a Direct Solver';
+disp 'Enter 2 for an Iterative Solver';
+n = input('Choose your Solver type: ');
+
+switch n
+
+    case 1
+
+        calculuL = SolveuLdirect(st);
+
+    case 2
+        
+        calculuL = SolveuLiterative(st);
+
+end
+
+calculuL.obteniruL;
+uL = calculuL.uL;
+
+% old -> uL = inv(LHS)*(RHS);
 R = KRR*uR + KRL*uL - FextR - F0R;
 
 u(vL,1)=uL;

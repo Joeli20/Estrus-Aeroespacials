@@ -115,8 +115,20 @@ Td = connectDOFs(n_el,n_nod,n_i,Tn);
 % Computation of element stiffness matrices
 Kel = computeKelBar(n_d,n_nod,n_i,n_el,x,Tn,mat,Tmat);
 
-% Global matrix assembly
-KG = assemblyKG(n_el,n_nod,n_i,n_el_dof,n_dof,Td,Kel);
+%Task2; Global matrix assembly
+s.n_nod = n_nod;
+s.n_i = n_i;
+s.Td = Td;
+s.Kel = Kel;
+s.n_el = n_el;
+s.n_dof = n_dof;
+
+ensambladorKG = AssembleKG(s);
+ensambladorKG.juntarKG;
+KG = ensambladorKG.KG;
+
+% old -> Global matrix assembly
+% old -> KG = assemblyKG(n_el,n_nod,n_i,n_dof,Td,Kel);
 
 % Global force vector assembly
 Fext = computeF(n_i,n_dof,Fdata);

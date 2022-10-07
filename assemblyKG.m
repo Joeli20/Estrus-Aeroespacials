@@ -1,4 +1,4 @@
-function KG = assemblyKG(n_el,n_nod,n_i,n_el_dof,n_dof,Td,Kel)
+function KG = assemblyKG(n_el,n_nod,n_i,n_dof,Td,Kel)
 %--------------------------------------------------------------------------
 % The function takes as inputs:
 %   - Dimensions:  n_el       Total number of elements
