@@ -10,7 +10,7 @@ close all;
 
 %% INPUT DATA
 
-F = 0; %N
+F = 920; %N
 Young = 75000 ; %MPa
 Area = 120 ;    %mm2
 thermal_coeff = 0.0000023 ; %K^-1
@@ -130,8 +130,13 @@ KG = ensambladorKG.KG;
 % old -> Global matrix assembly
 % old -> KG = assemblyKG(n_el,n_nod,n_i,n_dof,Td,Kel);
 
+%TestAssemblyKG
+%testCase = Stiffness_TEST;
+%results = testCase.run;
+%disp(results(:,1))
+
 % Global force vector assembly
-Fext = computeF(n_i,n_dof,Fdata);
+Fext = computeF(n_dof,Fdata);
 
 %---- TEMPERATURE ----
 
@@ -170,7 +175,7 @@ end
 [vL,vR,uR] = applyCond(n_i,n_dof,fixNod);
 
 % System resolution
-[u,R] = solveSys(vL,vR,uR,KG,Fext,F0);
+[u,R,LHS,RHS] = solveSys(vL,vR,uR,KG,Fext,F0);
 
 % Compute strain and stresses
 [eps,sig] = computeStrainStressBar(n_d,n_el,u,Td,x,Tn,mat,Tmat);

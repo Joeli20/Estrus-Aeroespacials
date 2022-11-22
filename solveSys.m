@@ -1,4 +1,4 @@
-function [u,R] = solveSys(vL,vR,uR,KG,Fext,F0)
+function [u,R,LHS,RHS] = solveSys(vL,vR,uR,KG,Fext,F0)
 %--------------------------------------------------------------------------
 % The function takes as inputs:
 %   - vL      Free degree of freedom vector

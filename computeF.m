@@ -1,4 +1,4 @@
-function Fext = computeF(n_i,n_dof,Fdata)
+function Fext = computeF(n_dof,Fdata)
 %--------------------------------------------------------------------------
 % The function takes as inputs:
 % prova2 
